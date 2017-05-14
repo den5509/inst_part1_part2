@@ -29,6 +29,7 @@ Linux Mint
     sudo reboot
  
 Теперь переходим непосредственно к установке:
+
 .. code-block:: text 
 
     sudo apt install docker-engine
