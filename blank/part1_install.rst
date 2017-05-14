@@ -62,8 +62,9 @@ Ubuntu
 
 .. code-block:: text  
 
-    echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo \
-    tee /etc/apt/sources.list.d/docker.list
+    echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main"  
+    
+    sudo tee /etc/apt/sources.list.d/docker.list
 
 Обновите индекс пакетов:
  
