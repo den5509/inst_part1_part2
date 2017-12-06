@@ -1,57 +1,19 @@
-Mac OS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-----------
 
 MS Windows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Контейнеры Windows возможно использовать только в Windows10 Профессиональная и Windows10 Корпоративная (Anniversary Edition). В его рамках вы сможите установить Docker для Windows и запустить контейнеры необходимые для выпонения лабораторных работ. 
 
-Для использования контейнеров Windows Server требуется изоляции Hyper-V в Windows 10, чтобы разработчики получили одинаковую версию ядра и конфигурации, которая будет использоваться применяться в рабочей среде. Необходима система под управлением Windows 10 Anniversary Edition или Creators Update (Профессиональная или Корпоративная). На самом деле это все можно сделать и на виртуальной машине Windows10, однако при этом нужно включить вложенную виртуализацию. Чтобы контейнеры Windows работали, необходимо установить критические обновления. Чтобы узнать версию ОС, запустите winver.exe и сравните указанную версию с версией в журнале обновлений Windows10. Убедитесь, что у вас установлена версия 14393.222 или более поздняя, перед тем как продолжить установку.
+Для использования контейнеров Windows Server требуется изоляции Hyper-V в Windows 10, чтобы разработчики получили одинаковую версию ядра и конфигурации, которая будет использоваться применяться в рабочей среде. 
+
+Необходима система под управлением Windows 10 Anniversary Edition или Creators Update (Профессиональная или Корпоративная). На самом деле это все можно сделать и на виртуальной машине Windows10, однако при этом нужно включить вложенную виртуализацию. Чтобы контейнеры Windows работали, необходимо установить критические обновления. 
+Чтобы узнать версию ОС:
+* Запустите winver.exe и сравните указанную версию с версией в журнале обновлений Windows10. 
+* Убедитесь, что у вас установлена версия 14393.222 или более поздняя, перед тем как продолжить установку.
 Скачайте Docker для Windows и запустите `программу установки. <https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe>`_ 
 Сделать это можно на сайте с подробной инструкцией от Docker непсрественно. Не забудьте перезагрузить систему после установки Docker. После перезагрузки запускаем приложение Docker for Windows. Тут необходимо пройти авторизацию по профилю на Docker Hub.
 Собственно все, после этого можно приступать к запуску контейнеров через командную строку Windows.
 
-
-Linux Mint
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Добавляем репозиторий Docker:
-
-.. code-block:: text
-    
-    sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 \
-      --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-      
-    # Next, point the package manager to the official Docker repository
-    
-    sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
- 
-    # Update the package database
- 
-    sudo apt update
-    #
-    
-    sudo apt install linux-image-generic linux-image-extra-virtual
- 
-    # Reboot the system so it would be running on the newly installed kernel image
- 
-    sudo reboot
- 
-Теперь переходим непосредственно к установке:
-
-.. code-block:: text 
-
-    sudo apt install docker-engine
- 
-    #
-    # Run a Docker container
-    # This container is just a test container, and it will run and exit
- 
-    sudo docker run hello-world
- 
-    #
    
 Ubuntu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
